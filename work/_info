@@ -1,0 +1,301 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/DELL/Downloads/AXI_UART_Peripheral
+T_opt
+!s110 1792445889
+VQeEgC?><51;]LV1K;;1>]2
+04 12 4 work axi_uart_pkg fast 0
+Z1 04 6 4 work tb_top fast 0
+=1-106530ef93cc-6ad68dc0-316-500c
+Z2 o-quiet -auto_acc_if_foreign -work work -L mtiUvm -suppress 3009 +acc
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;10.6d;65
+T_opt1
+!s110 1792445733
+VD;:4;ObKh]o_zACZa2_]e3
+R1
+=1-106530ef93cc-6ad68d24-7b-28f0
+R2
+R3
+n@_opt1
+R4
+R0
+T_opt2
+!s110 1792442592
+VP6fT4J278E]bi=9JLo>kh1
+R1
+=1-106530ef93cc-6ad680df-353-4108
+o-quiet -auto_acc_if_foreign -work work -L mtiUvm +acc
+R3
+n@_opt2
+R4
+R0
+Yaxi_uart_if
+Z5 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z6 !s110 1792445886
+!i10b 1
+!s100 0zHP?U1Ca7B=3UE>b?KTW3
+IS8B[@nJ`ildhdH^I9P@kb1
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+!s105 axi_uart_if_sv_unit
+S1
+R0
+w1792363348
+8sim/uvm_tb/axi_uart_if.sv
+Fsim/uvm_tb/axi_uart_if.sv
+L0 1
+Z8 OL;L;10.6d;65
+r1
+!s85 0
+31
+Z9 !s108 1792445886.000000
+!s107 sim/uvm_tb/axi_uart_if.sv|
+!s90 -reportprogress|300|-timescale|1ns/1ps|+incdir+C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src|sim/uvm_tb/axi_uart_if.sv|
+!i113 0
+Z10 o-timescale 1ns/1ps -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -timescale 1ns/1ps +incdir+C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+Xaxi_uart_pkg
+!s115 axi_uart_if
+R5
+Z11 DXx6 mtiUvm 7 uvm_pkg 0 22 oMKUklN?>LE6@MJe7=2><1
+!s110 1792445887
+!i10b 1
+!s100 DCBk]lCTFb^zMi36f:Q:W3
+I@cG6Dn:J=>eCTKf=f^bY33
+V@cG6Dn:J=>eCTKf=f^bY33
+S1
+R0
+w1792363866
+8sim/uvm_tb/axi_uart_pkg.sv
+Fsim/uvm_tb/axi_uart_pkg.sv
+Z12 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/uvm_macros.svh
+Z13 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
+Z14 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
+Z15 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh
+Z16 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh
+Z17 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh
+Z18 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh
+Z19 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh
+Z20 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh
+Z21 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh
+Z22 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
+Z23 FC:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
+Fsim/uvm_tb/axi_uart_item.sv
+Fsim/uvm_tb/axi_uart_sequencer.sv
+Fsim/uvm_tb/axi_uart_sequence.sv
+Fsim/uvm_tb/axi_uart_driver.sv
+Fsim/uvm_tb/axi_uart_monitor.sv
+Fsim/uvm_tb/axi_uart_agent.sv
+Fsim/uvm_tb/axi_uart_scoreboard.sv
+Fsim/uvm_tb/axi_uart_env.sv
+Fsim/uvm_tb/axi_uart_test.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 sim/uvm_tb/axi_uart_test.sv|sim/uvm_tb/axi_uart_env.sv|sim/uvm_tb/axi_uart_scoreboard.sv|sim/uvm_tb/axi_uart_agent.sv|sim/uvm_tb/axi_uart_monitor.sv|sim/uvm_tb/axi_uart_driver.sv|sim/uvm_tb/axi_uart_sequence.sv|sim/uvm_tb/axi_uart_sequencer.sv|sim/uvm_tb/axi_uart_item.sv|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/uvm_macros.svh|sim/uvm_tb/axi_uart_pkg.sv|
+!s90 -reportprogress|300|-timescale|1ns/1ps|+incdir+C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src|+incdir+sim/uvm_tb|sim/uvm_tb/axi_uart_pkg.sv|
+!i113 0
+R10
+Z24 !s92 -timescale 1ns/1ps +incdir+C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src +incdir+sim/uvm_tb -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vaxi_uart_top
+R6
+!i10b 1
+!s100 >V3^zX[620TDIAzHXVLn^3
+I>bS`TOWMPeEQ6?`GA>E6I1
+R7
+R0
+w1792104867
+8rtl/axi_uart_top.v
+Frtl/axi_uart_top.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+Z25 !s107 rtl/uart_tx.v|rtl/uart_rx.v|rtl/tb_axi_uart.v|rtl/fifo.v|rtl/baud_gen.v|rtl/axi_uart_top.v|
+Z26 !s90 -reportprogress|300|-timescale|1ns/1ps|rtl/axi_uart_top.v|rtl/baud_gen.v|rtl/fifo.v|rtl/tb_axi_uart.v|rtl/uart_rx.v|rtl/uart_tx.v|
+!i113 0
+R10
+R3
+vbaud_gen
+R6
+!i10b 1
+!s100 b>WXPUMaAUNI@>P_0Fj@72
+ILVV48G;NYlY2mmlCnMHH43
+R7
+R0
+w1792107129
+8rtl/baud_gen.v
+Frtl/baud_gen.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R25
+R26
+!i113 0
+R10
+R3
+vfifo
+R6
+!i10b 1
+!s100 Sg4OTADghk1dLTWBBN3eC0
+I?>KT:UI4Oo9Hko6aYm9GM2
+R7
+R0
+w1792100456
+8rtl/fifo.v
+Frtl/fifo.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R25
+R26
+!i113 0
+R10
+R3
+vtb_axi_uart
+R6
+!i10b 1
+!s100 I?mjBOQ]ocz4<b6T2YaOI0
+I8gX[GF;XJ23mHAG`i2S:;0
+R7
+R0
+w1792100210
+8rtl/tb_axi_uart.v
+Frtl/tb_axi_uart.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R25
+R26
+!i113 0
+R10
+R3
+vtb_top
+R5
+R11
+DXx4 work 14 tb_top_sv_unit 0 22 HcgdYzNPWjmOI0MB_J<F02
+R7
+r1
+!s85 0
+31
+!i10b 1
+!s100 OnGml=^RDo3o^SmPoimWz3
+IS]a7`z]]6JjJ<A<][^6][0
+!s105 tb_top_sv_unit
+S1
+R0
+Z27 w1792442574
+Z28 8sim/uvm_tb/tb_top.sv
+Z29 Fsim/uvm_tb/tb_top.sv
+L0 4
+R8
+Z30 !s108 1792445887.000000
+Z31 !s107 C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/uvm_macros.svh|sim/uvm_tb/tb_top.sv|
+Z32 !s90 -reportprogress|300|-timescale|1ns/1ps|+incdir+C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src|+incdir+sim/uvm_tb|sim/uvm_tb/tb_top.sv|
+!i113 0
+R10
+R24
+R3
+Xtb_top_sv_unit
+R5
+R11
+VHcgdYzNPWjmOI0MB_J<F02
+r1
+!s85 0
+31
+!i10b 1
+!s100 RH2JM7a7JI9PbNb9li:Eb2
+IHcgdYzNPWjmOI0MB_J<F02
+!i103 1
+S1
+R0
+R27
+R28
+R29
+R12
+R13
+R14
+R15
+R16
+R17
+R18
+R19
+R20
+R21
+R22
+R23
+L0 1
+R8
+R30
+R31
+R32
+!i113 0
+R10
+R24
+R3
+vuart_rx
+R6
+!i10b 1
+!s100 aYIdBC^6G<UWokYU3f05F1
+IoQ?b8FOm1AYXAz@ZCf@Ve2
+R7
+R0
+w1792103760
+8rtl/uart_rx.v
+Frtl/uart_rx.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R25
+R26
+!i113 0
+R10
+R3
+vuart_tx
+R6
+!i10b 1
+!s100 _<1L3DMdQdeaE67Q:VhMI3
+I2NeGHS7I1n[jmI<[KIT[12
+R7
+R0
+w1792103863
+8rtl/uart_tx.v
+Frtl/uart_tx.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R25
+R26
+!i113 0
+R10
+R3

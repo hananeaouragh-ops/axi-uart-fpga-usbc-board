@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="AXI_UART_Peripheral">
+		<CBX_INST_ENTRY INSTANCE_NAME="|axi_uart_top|fifo:rx_fifo_inst|altsyncram:array_reg_rtl_0" CBX_FILE_NAME="altsyncram_h6e1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|axi_uart_top|fifo:tx_fifo_inst|altsyncram:array_reg_rtl_1" CBX_FILE_NAME="altsyncram_h6e1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
