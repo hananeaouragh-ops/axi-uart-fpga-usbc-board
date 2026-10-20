@@ -2,7 +2,7 @@
 
 A complete end-to-end SoC peripheral design featuring a Verilog AXI4-Lite UART IP Core, a full SystemVerilog UVM verification environment, Intel Quartus FPGA synthesis, and a custom PCB breakout board designed in KiCad 10.
 
-## 🚀 Key Project Highlights
+## Key Project Highlights
 - **RTL Architecture:** AXI4-Lite slave interface with independent hardware TX/RX FIFOs and configurable Baud Rate Generator.
 - **FPGA Synthesis:** Compiled on Intel Cyclone II (EP2C5F256C6) reaching 189.72 MHz with minimal logic footprint (196 LEs).
 - **UVM Verification:** 100% test completion with automated transaction matching via UVM Scoreboard (0 Errors / 0 Fatals).
