@@ -1,0 +1,10 @@
+# Console excerpt from supplied fifo_1795386151.log; ModelSim run by Hanane Aouragh.
+# PASS: FIFO full after 16 writes
+# PASS: overflow attempts preserved data; FIFO empty
+# PASS: pointer wraparound
+# PASS: reset discarded pending data
+# FIFO TEST PASS: cycles=662 comparisons=298
+# ** Note: $finish    : sim/fifo_tb/tb_fifo_checked.sv(123)
+#    Time: 6710 ns  Iteration: 1  Instance: /tb_fifo_checked
+# 1
+# Break at sim/fifo_tb/tb_fifo_checked.sv line 123
