@@ -1,0 +1,34 @@
+# Console excerpt from supplied write_bp_1795386249.log; ModelSim run by Hanane Aouragh.
+# UVM_INFO @ 0: reporter [RNTST] Running test axi_uart_write_bp_test...
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 120215000: uvm_test_top.env.scoreboard [MATCH] Expected=50 Actual=50
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 240345000: uvm_test_top.env.scoreboard [MATCH] Expected=51 Actual=51
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 360475000: uvm_test_top.env.scoreboard [MATCH] Expected=52 Actual=52
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 480605000: uvm_test_top.env.scoreboard [MATCH] Expected=53 Actual=53
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 600735000: uvm_test_top.env.scoreboard [MATCH] Expected=54 Actual=54
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 720865000: uvm_test_top.env.scoreboard [MATCH] Expected=55 Actual=55
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 840995000: uvm_test_top.env.scoreboard [MATCH] Expected=56 Actual=56
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 961125000: uvm_test_top.env.scoreboard [MATCH] Expected=57 Actual=57
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 1081255000: uvm_test_top.env.scoreboard [MATCH] Expected=58 Actual=58
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 1201385000: uvm_test_top.env.scoreboard [MATCH] Expected=59 Actual=59
+# UVM_INFO sim/uvm_tb/axi_uart_write_bp_test.sv(107) @ 1201390000: uvm_test_top [WRITE_BP] Completed 10 writes with BREADY delayed 5 cycles
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1201390000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(65) @ 1201390000: uvm_test_top.env.scoreboard [SUMMARY] writes=10 reads=10 match_count=10 mismatches=0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   16
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [MATCH]    10
+# [Questa UVM]     2
+# [RNTST]     1
+# [SUMMARY]     1
+# [TEST_DONE]     1
+# [WRITE_BP]     1
+# ** Note: $finish    : C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1201390 ns  Iteration: 55  Instance: /tb_write_bp
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
