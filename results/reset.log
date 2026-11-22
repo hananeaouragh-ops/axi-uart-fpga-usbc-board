@@ -1,0 +1,37 @@
+# Console excerpt from supplied reset_1795385997.log; ModelSim run by Hanane Aouragh.
+# UVM_INFO @ 0: reporter [RNTST] Running test axi_uart_reset_test...
+# UVM_INFO sim/uvm_tb/axi_uart_reset_test.sv(35) @ 10135000: uvm_test_top [RESET] Reset during UART transmission
+# UVM_INFO sim/uvm_tb/axi_uart_reset_test.sv(48) @ 10210000: uvm_test_top [RESET] Discarded the interrupted byte
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 250255000: uvm_test_top.env.scoreboard [MATCH] Expected=00 Actual=00
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 370315000: uvm_test_top.env.scoreboard [MATCH] Expected=ff Actual=ff
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 490375000: uvm_test_top.env.scoreboard [MATCH] Expected=55 Actual=55
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 610435000: uvm_test_top.env.scoreboard [MATCH] Expected=aa Actual=aa
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 730495000: uvm_test_top.env.scoreboard [MATCH] Expected=94 Actual=94
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 850555000: uvm_test_top.env.scoreboard [MATCH] Expected=e7 Actual=e7
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 970615000: uvm_test_top.env.scoreboard [MATCH] Expected=a4 Actual=a4
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 1090675000: uvm_test_top.env.scoreboard [MATCH] Expected=0d Actual=0d
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 1210735000: uvm_test_top.env.scoreboard [MATCH] Expected=b3 Actual=b3
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(43) @ 1330795000: uvm_test_top.env.scoreboard [MATCH] Expected=c9 Actual=c9
+# UVM_INFO sim/uvm_tb/axi_uart_reset_test.sv(66) @ 1330800000: uvm_test_top [RESET_RECOVERY] 10 loopback transfers matched after reset
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1330800000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(65) @ 1330800000: uvm_test_top.env.scoreboard [SUMMARY] writes=10 reads=10 match_count=10 mismatches=0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   18
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [MATCH]    10
+# [Questa UVM]     2
+# [RESET]     2
+# [RESET_RECOVERY]     1
+# [RNTST]     1
+# [SUMMARY]     1
+# [TEST_DONE]     1
+# ** Note: $finish    : C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1330800 ns  Iteration: 61  Instance: /tb_reset
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
