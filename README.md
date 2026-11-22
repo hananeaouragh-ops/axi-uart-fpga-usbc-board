@@ -38,7 +38,8 @@ The project implements an AXI4-Lite UART IP core with transmit and receive FIFOs
 
 ### Verification
 - Self-checking Verilog testbench: AXI write, UART TX, loopback, RX FIFO, AXI read-back (test byte `8'hA5`)
-- UVM environment (driver, monitor, scoreboard) running in ModelSim: 0 `UVM_ERROR`, 0 `UVM_FATAL`
+- Comparing UVM scoreboard; normal loopback, reset recovery and read/write response backpressure tests
+- Standalone FIFO reference-queue checks; recorded ModelSim results linked below
 
 ### PCB Design
 - Custom 2-layer USB-C to UART breakout board (65 x 35 mm)
@@ -127,42 +128,41 @@ Expected output:
 [TB SUCCESS] Loopback Data Matched: 0xa5
 ```
 
-### UVM environment
+### Checked UVM tests — 22 November 2026
 
-The UVM environment (agent with sequencer, driver and monitor, scoreboard, environment and test) runs in ModelSim with these results:
+The scoreboard now compares expected transmitted bytes against AXI RX read-back data, rather than only printing monitored writes.
 
-```text
-UVM_INFO    : 14
-UVM_WARNING : 0
-UVM_ERROR   : 0
-UVM_FATAL   : 0
-[SCOREBOARD] : 10 reports
-```
+| Test | Observed result | Evidence |
+|---|---|---|
+| Normal loopback | 10 writes, 10 reads, 10 matches | [Log](results/loopback.log) |
+| Reset during UART transmission | Interrupted byte discarded; 10 subsequent transfers match | [Log](results/reset.log) |
+| Read response backpressure | RREADY delayed 5 cycles; response stable, 10 matches | [Log](results/read_backpressure.log) |
+| Write response backpressure | BREADY delayed 5 cycles; response stable, 10 matches | [Log](results/write_backpressure.log) |
+| Standalone FIFO, SystemVerilog | 662 cycles, 298 data comparisons; full/empty, overflow attempts, wraparound, reset and random operations | [Log](results/fifo.log) |
 
-### Running the simulation (ModelSim)
+All four UVM runs reported zero UVM_ERROR and UVM_FATAL. These are console excerpts from ModelSim SE-64 10.6d runs performed by Hanane Aouragh and supplied with the source archive; they were not rerun in the publication environment.
 
-From the project root:
+**Bug found and fixed:** delaying RREADY exposed a direct connection from RX FIFO output to RDATA. Popping the FIFO changed the response before acceptance. The RTL now holds read data in a register and blocks another read while a response is pending. The same test changed from 10 mismatches and 50 stability errors to 10 matches and zero errors. [Before-fix evidence](results/read_backpressure_before_fix.log).
 
-```tcl
-vlog rtl/baud_gen.v rtl/fifo.v rtl/uart_rx.v rtl/uart_tx.v rtl/axi_uart_top.v
-vlog rtl/tb_axi_uart.v
-vsim -voptargs="+acc" tb_axi_uart
-add wave -r /*
-run -all
-```
+### Running the simulations
 
-UVM test:
+In the ModelSim Transcript, change to the repository root. Run each command separately, waiting for its report before starting the next:
 
 ```tcl
-vlog -sv +incdir+sim/uvm_tb sim/uvm_tb/axi_uart_if.sv
-vlog -sv +incdir+sim/uvm_tb sim/uvm_tb/tb_top.sv
-vsim -voptargs="+acc" tb_top +UVM_TESTNAME=axi_uart_test
-run -all
+do run_uvm.do
+do run_reset.do
+do run_backpressure.do
+do run_write_bp.do
+do run_fifo.do
 ```
+
+The scripts compile the required sources and save timestamped console logs and wave databases in `results/`. The UVM scripts use ModelSim's installed UVM library. The new FIFO runner wraps the supplied standalone testbench and has not itself been executed in ModelSim here.
 
 ---
 
 ## FPGA Synthesis Results
+
+**Historical results for the earlier RTL revision. Synthesis and timing analysis have not been repeated after the November read-response fix.**
 
 Synthesized for the Intel Cyclone II `EP2C5F256C6` with Quartus II.
 
@@ -210,7 +210,9 @@ The Fmax value is a synthesis timing-analysis result for the configured design a
 ### 4. Simulation Waveform (ModelSim SE-64)
 ![Simulation Waveform](docs/waveform.png)
 
-### 5. UVM Report Summary (ModelSim SE-64)
+### 5. Historical UVM Report Summary (earlier environment)
+
+This earlier screenshot predates the comparing scoreboard. Use the linked November logs above for the current validation results.
 ![UVM Report Summary](docs/uvm_summary.png)
 
 ---
@@ -220,7 +222,9 @@ The Fmax value is a synthesis timing-analysis result for the configured design a
 ```text
 .
 ├── rtl/       Verilog sources and testbench
-├── sim/       UVM environment (sim/uvm_tb)
+├── sim/       UVM environment and standalone FIFO test
+├── results/   Supplied console evidence
+├── run_*.do   ModelSim runners
 ├── pcb/       KiCad project and Python scripts
 ├── docs/      Screenshots
 ├── LICENSE
@@ -258,7 +262,10 @@ cd axi-uart-fpga-usbc-board
 - The UVM environment is a first version: limited stimulus, no functional coverage yet.
 - AXI4-Lite protocol compliance has not been checked exhaustively.
 - The PCB has not been fabricated, and no physical UART communication has been tested.
-- Fmax comes from synthesis timing analysis, not from hardware measurements.
+- Fmax comes from the earlier RTL revision's timing analysis, not hardware measurements or the updated RTL.
+- Current AXI write tests issue AW and W together, one transfer at a time. Independent channel timing, multiple pending writes and WSTRB handling are not validated; the RTL currently ignores WSTRB.
+- Full-FIFO behavior was tested on the standalone FIFO, not at UART integration level. These tests are not exhaustive AXI compliance or functional coverage closure.
+- ASIC synthesis, physical design, DFT and hardware validation have not been performed.
 
 ---
 
@@ -269,7 +276,9 @@ cd axi-uart-fpga-usbc-board
 - [x] UVM environment (driver, monitor, scoreboard)
 - [x] PCB layout, routing and DRC
 - [ ] Add functional coverage and more UVM sequences
-- [ ] Verify FIFO overflow/underflow and reset scenarios
+- [x] Standalone FIFO boundary tests and UART reset recovery
+- [x] Read/write response backpressure tests (5-cycle delays)
+- [ ] UART integration with full TX/RX FIFOs and broader AXI traffic
 - [ ] Generate manufacturing files (Gerber, drill, BOM) and fabricate the PCB
 - [ ] Hardware test: UART loopback and FPGA-to-PC communication
 
