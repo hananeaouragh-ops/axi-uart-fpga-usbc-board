@@ -48,7 +48,10 @@ module axi_uart_top #(
     reg  tx_fifo_wr, rx_fifo_rd;
 
     // Bus de lecture AXI
-    assign s_axi_rdata = {24'h0, rx_data_fifo};
+    
+reg [C_S_AXI_DATA_WIDTH-1:0] axi_rdata_hold;
+    assign s_axi_rdata = axi_rdata_hold;
+
 
     // Générateur d'Horloge Baud Rate
     baud_gen #(.CLK_FREQ(100000000), .BAUD_RATE(115200)) baud_gen_inst (
@@ -129,29 +132,39 @@ module axi_uart_top #(
         end
     end
 
+    
     // Logique de Lecture AXI4-Lite
+    // One outstanding response; data held until acceptance.
     always @(posedge s_axi_aclk or negedge s_axi_aresetn) begin
         if (!s_axi_aresetn) begin
             s_axi_arready <= 1'b0;
             s_axi_rvalid  <= 1'b0;
             s_axi_rresp   <= 2'b00;
+            axi_rdata_hold <= {C_S_AXI_DATA_WIDTH{1'b0}};
             rx_fifo_rd    <= 1'b0;
         end else begin
-            rx_fifo_rd <= 1'b0;
-            if (~s_axi_arready && s_axi_arvalid) begin
+            s_axi_arready <= 1'b0;
+            rx_fifo_rd    <= 1'b0;
+
+            if (s_axi_rvalid && s_axi_rready)
+                s_axi_rvalid <= 1'b0;
+
+            if (!s_axi_arready &&
+                !s_axi_rvalid &&
+                !rx_fifo_rd &&
+                s_axi_arvalid) begin
+
                 s_axi_arready <= 1'b1;
                 s_axi_rvalid  <= 1'b1;
-                if (s_axi_araddr[3:0] == 4'h0 && !rx_empty) begin
+                s_axi_rresp   <= 2'b00;
+                axi_rdata_hold <= {C_S_AXI_DATA_WIDTH{1'b0}};
+
+                if (s_axi_araddr == 0 && !rx_empty) begin
+                    axi_rdata_hold <= rx_data_fifo;
                     rx_fifo_rd <= 1'b1;
                 end
-            end else begin
-                s_axi_arready <= 1'b0;
-            end
-
-            if (s_axi_rvalid && s_axi_rready) begin
-                s_axi_rvalid <= 1'b0;
             end
         end
     end
-
 endmodule
+
