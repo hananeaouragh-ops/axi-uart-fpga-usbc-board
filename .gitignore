@@ -26,3 +26,8 @@ modelsim.ini
 *.kicad_sch-bak
 .history/
 _saved-*/
+
+# Preserve curated verification evidence
+!results/*.log
+*.bak_*
+backup_uvm_*/
