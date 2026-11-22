@@ -1,0 +1,87 @@
+# Console excerpt from supplied backpressure_1795385731.log; ModelSim run by Hanane Aouragh.
+# UVM_INFO @ 0: reporter [RNTST] Running test axi_uart_backpressure_test...
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 120155000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a5 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 120165000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a5 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 120175000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a5 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 120185000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a5 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 120195000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a5 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_scoreboard.sv(38) @ 120205000: uvm_test_top.env.scoreboard [MISMATCH] Expected=a5 Actual=xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 240275000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a4 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 240285000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a4 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 240295000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a4 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 240305000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a4 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 240315000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a4 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_scoreboard.sv(38) @ 240325000: uvm_test_top.env.scoreboard [MISMATCH] Expected=a4 Actual=xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 360395000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a7 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 360405000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a7 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 360415000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a7 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 360425000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a7 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 360435000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a7 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_scoreboard.sv(38) @ 360445000: uvm_test_top.env.scoreboard [MISMATCH] Expected=a7 Actual=xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 480515000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a6 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 480525000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a6 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 480535000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a6 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 480545000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a6 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 480555000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a6 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_scoreboard.sv(38) @ 480565000: uvm_test_top.env.scoreboard [MISMATCH] Expected=a6 Actual=xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 600635000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a1 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 600645000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a1 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 600655000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a1 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 600665000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a1 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 600675000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a1 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_scoreboard.sv(38) @ 600685000: uvm_test_top.env.scoreboard [MISMATCH] Expected=a1 Actual=xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 720755000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a0 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 720765000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a0 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 720775000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a0 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 720785000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a0 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 720795000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a0 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_scoreboard.sv(38) @ 720805000: uvm_test_top.env.scoreboard [MISMATCH] Expected=a0 Actual=xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 840875000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a3 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 840885000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a3 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 840895000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a3 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 840905000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a3 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 840915000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a3 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_scoreboard.sv(38) @ 840925000: uvm_test_top.env.scoreboard [MISMATCH] Expected=a3 Actual=xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 960995000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a2 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 961005000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a2 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 961015000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a2 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 961025000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a2 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 961035000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000a2 now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_scoreboard.sv(38) @ 961045000: uvm_test_top.env.scoreboard [MISMATCH] Expected=a2 Actual=xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 1081115000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000ad now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 1081125000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000ad now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 1081135000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000ad now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 1081145000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000ad now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 1081155000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000ad now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_scoreboard.sv(38) @ 1081165000: uvm_test_top.env.scoreboard [MISMATCH] Expected=ad Actual=xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 1201235000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000ac now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 1201245000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000ac now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 1201255000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000ac now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 1201265000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000ac now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_backpressure_test.sv(59) @ 1201275000: uvm_test_top [RDATA_STABILITY] Data changed: before=000000ac now=000000xx
+# UVM_ERROR sim/uvm_tb/axi_uart_scoreboard.sv(38) @ 1201285000: uvm_test_top.env.scoreboard [MISMATCH] Expected=ac Actual=xx
+# UVM_INFO sim/uvm_tb/axi_uart_backpressure_test.sv(91) @ 1201290000: uvm_test_top [BACKPRESSURE] Completed 10 reads with RREADY delayed 5 cycles
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1201290000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_ERROR sim/uvm_tb/axi_uart_scoreboard.sv(58) @ 1201290000: uvm_test_top.env.scoreboard [CHECK] Expected 10 correct loopback transfers
+# UVM_INFO sim/uvm_tb/axi_uart_scoreboard.sv(65) @ 1201290000: uvm_test_top.env.scoreboard [SUMMARY] writes=10 reads=10 match_count=0 mismatches=10
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    6
+# UVM_WARNING :    0
+# UVM_ERROR :   61
+# UVM_FATAL :    0
+# ** Report counts by id
+# [BACKPRESSURE]     1
+# [CHECK]     1
+# [MISMATCH]    10
+# [Questa UVM]     2
+# [RDATA_STABILITY]    50
+# [RNTST]     1
+# [SUMMARY]     1
+# [TEST_DONE]     1
+# ** Note: $finish    : C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1201290 ns  Iteration: 55  Instance: /tb_backpressure
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/modeltech64_10.6d/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
