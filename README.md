@@ -1,10 +1,10 @@
 # AXI4-Lite UART IP Core & Custom USB-C to UART PCB
 
-An end-to-end embedded hardware design project combining **Verilog RTL development, FPGA synthesis, simulation-based verification, and custom PCB design**.
+An end-to-end embedded hardware design project combining **Verilog RTL development, FPGA synthesis, simulation-based verification, custom PCB design, and SKY130 ASIC physical implementation**.
 
 The project implements an AXI4-Lite UART IP core with transmit and receive FIFOs, a configurable baud rate generator, a self-checking Verilog testbench and a UVM environment. It also includes a custom two-layer USB-C to UART breakout PCB designed in KiCad 10 around the FT232RL USB-to-UART bridge.
 
-> **Project Status:** RTL simulation (Verilog testbench and UVM environment) and FPGA synthesis completed. PCB layout, routing and KiCad DRC completed with 0 errors. Fabrication and hardware validation are still pending.
+> **Project Status:** FPGA/verification and PCB results are documented below. A separate ASIC RTL snapshot has completed an OpenLane 2.1.11 SKY130A run through GDS, Magic DRC and Netgen LVS, with zero reported setup/hold, slew, fanout, capacitance and antenna violations under the recorded constraints. See [ASIC physical design](physical_design/README.md) for artifacts, evidence and validation limits. Fabrication and hardware validation are pending.
 
 ---
 
@@ -15,6 +15,7 @@ The project implements an AXI4-Lite UART IP core with transmit and receive FIFOs
 - [RTL Design](#rtl-design)
 - [Verification and Simulation](#verification-and-simulation)
 - [FPGA Synthesis Results](#fpga-synthesis-results)
+- [SKY130 ASIC Physical Design](#sky130-asic-physical-design)
 - [Custom USB-C to UART PCB](#custom-usb-c-to-uart-pcb)
 - [Visual Showcase](#visual-showcase)
 - [Repository Structure](#repository-structure)
@@ -176,6 +177,16 @@ The Fmax value is a synthesis timing-analysis result for the configured design a
 
 ---
 
+## SKY130 ASIC Physical Design
+
+The UART ASIC implementation uses **OpenLane 2.1.11, OpenROAD, KLayout, Magic and Netgen**, targeting **sky130A / sky130_fd_sc_hd** with a 10 ns clock constraint. The recorded final run reports **Magic DRC = 0, LVS errors = 0, antenna = 0, max slew/fanout/capacitance violations = 0**, and zero setup/hold violations across nine analyzed timing corners. Worst setup slack is **+2.2284 ns**, and worst hold slack is **+0.0300 ns**.
+
+[Physical design documentation, compressed GDS, implementation netlist and reports](physical_design/README.md).
+
+The ASIC RTL snapshot includes an RX synchronizer and is stored separately from the FPGA sources. The earlier UVM regression is not evidence for this ASIC revision; its supplied functional evidence is the single-byte loopback log. CDC/reset constraint review, broader regression and fabrication remain outside this recorded run.
+
+---
+
 ## Custom USB-C to UART PCB
 
 | Ref | Component | Function |
@@ -265,7 +276,7 @@ cd axi-uart-fpga-usbc-board
 - Fmax comes from the earlier RTL revision's timing analysis, not hardware measurements or the updated RTL.
 - Current AXI write tests issue AW and W together, one transfer at a time. Independent channel timing, multiple pending writes and WSTRB handling are not validated; the RTL currently ignores WSTRB.
 - Full-FIFO behavior was tested on the standalone FIFO, not at UART integration level. These tests are not exhaustive AXI compliance or functional coverage closure.
-- ASIC synthesis, physical design, DFT and hardware validation have not been performed.
+- ASIC synthesis and physical implementation now have recorded results in `physical_design/`. ASIC CDC/reset constraint review and broader regression remain pending; DFT and hardware validation have not been performed.
 
 ---
 
@@ -275,6 +286,8 @@ cd axi-uart-fpga-usbc-board
 - [x] FPGA synthesis (Cyclone II)
 - [x] UVM environment (driver, monitor, scoreboard)
 - [x] PCB layout, routing and DRC
+- [x] SKY130 ASIC run through GDS, Magic DRC and Netgen LVS
+- [ ] ASIC CDC/reset constraint review and broader functional regression
 - [ ] Add functional coverage and more UVM sequences
 - [x] Standalone FIFO boundary tests and UART reset recovery
 - [x] Read/write response backpressure tests (5-cycle delays)
@@ -308,3 +321,4 @@ Released under the MIT License (see [LICENSE](LICENSE)).
 **Hanane Aouragh**
 
 Embedded Systems | FPGA Design | Digital Hardware | PCB Design
+
