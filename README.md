@@ -183,6 +183,10 @@ The UART ASIC implementation uses **OpenLane 2.1.11, OpenROAD, KLayout, Magic an
 
 [Physical design documentation, compressed GDS, implementation netlist and reports](physical_design/README.md).
 
+![UART standard-cell placement during implementation](physical_design/images/uart-cell-placement.png)
+
+*UART placement view from an earlier implementation stage, before final electrical closure. [More implementation images](physical_design/README.md#implementation-gallery).*
+
 The ASIC RTL snapshot includes an RX synchronizer and is stored separately from the FPGA sources. The earlier UVM regression is not evidence for this ASIC revision; its supplied functional evidence is the single-byte loopback log. CDC/reset constraint review, broader regression and fabrication remain outside this recorded run.
 
 ---

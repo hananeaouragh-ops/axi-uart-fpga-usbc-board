@@ -22,6 +22,22 @@ Recorded implementation run completed on 25 November 2026 using OpenLane 2.1.11 
 
 See [final metrics](reports/final_metrics.json), [Magic log](reports/magic-drc.log), [Netgen report](reports/lvs.netgen.rpt) and [STA reports](reports/sta). Metrics are carried across steps, so instance area/count in the metrics file should not be interpreted as a fresh post-fill cell census. This is a completed implementation run under the saved constraints, not a fabrication/signoff certification or a measured silicon frequency.
 
+## Implementation gallery
+
+Original UART images supplied during the implementation session. These capture earlier implementation stages, before the final electrical-closure repairs. Use the published GDS and reports for the final verified revision.
+
+### Power distribution and physical infrastructure
+
+![UART power distribution and physical infrastructure](images/uart-power-grid.png)
+
+Horizontal and vertical supply straps span the core, with repeated physical cells visible across the layout.
+
+### Standard-cell placement view
+
+![UART standard-cell placement view](images/uart-cell-placement.png)
+
+The UART logic occupies the placement rows within the power grid. Colors and hatching represent the layers enabled in the viewer.
+
 ## Artifacts
 
 - [GDSII, gzip compressed](results/axi_uart_top.gds.gz)
